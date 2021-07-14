@@ -12,22 +12,24 @@ export default function Feed() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    let unmounted = false;
-    if (!unmounted) {
-      db.collection("posts").onSnapshot((snapshot) =>
-      setPosts(snapshot.docs.map((doc) => doc.data()))
-    );
-    }
-
+    // let unmounted = false;
+    // if (!unmounted) {
+    //   db.collection("posts").onSnapshot((snapshot) =>
+    //   setPosts(snapshot.docs.map((doc) => doc.data()))
+    // );
+    // }
+    db.collection("posts").onSnapshot((snapshot) =>
+    setPosts(snapshot.docs.map((doc) => doc.data()))
+  );
   }, []);
   return (
     <Container>
       <Tweets>
         <TweetBox />
         <FlipMove>
-          {posts.map((post) => (
+          {posts.map((post, idx) => (
             <Post
-              // key={post.text}
+              key={idx}
               displayName={post.displayName}
               username={post.username}
               verified={post.verified}
