@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ProfilePage from '../ProfilePage';
+import ProfilePage from '../../components/ProfilePage';
 
 import {
   Container,
@@ -14,7 +14,7 @@ import {
   EmailIcon,
 } from './styles';
 
-const Main: React.FC = () => {
+export default function Notifications() {
   return (
     <Container>
       <Header>
@@ -31,7 +31,7 @@ const Main: React.FC = () => {
       <ProfilePage />
 
       <BottomMenu>
-        <HomeIcon className="active" />
+        <HomeIcon />
         <SearchIcon />
         <BellIcon />
         <EmailIcon />
@@ -40,4 +40,3 @@ const Main: React.FC = () => {
   );
 };
 
-export default Main;

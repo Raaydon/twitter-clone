@@ -1,5 +1,8 @@
 import React from 'react';
-
+import 'firebase/auth';
+import firebase from 'firebase/app';
+// import db from "../../firebase";
+import db from '../../firebase';
 import Feed from '../Feed';
 
 import {
@@ -8,12 +11,16 @@ import {
   Avatar,
   ProfileData,
   EditButton,
-  LocationIcon,
   CakeIcon,
   Followage,
 } from './styles';
 
-const ProfilePage: React.FC = () => {
+export default function ProfilePage() {
+  let user = firebase.auth().currentUser;
+  var userEmail = user.email;
+  var userCreationDate = user.creation
+  var userData = db.collection('users').doc(userEmail).get();
+
   return (
     <Container>
       <Banner>
@@ -28,7 +35,7 @@ const ProfilePage: React.FC = () => {
       <ProfileData>
         <EditButton outlined>Set up profile</EditButton>
 
-        <h1>Elton Lazzarin</h1>
+        <h1>{userData.username}</h1>
         <h2>@elton_lazzarin</h2>
 
         <p>
@@ -41,12 +48,8 @@ const ProfilePage: React.FC = () => {
 
         <ul>
           <li>
-            <LocationIcon />
-            São José do Rio Preto, Brazil
-          </li>
-          <li>
             <CakeIcon />
-            Born on May 13, 1989
+            Created Account on {userCreationDate}
           </li>
         </ul>
 
@@ -64,6 +67,4 @@ const ProfilePage: React.FC = () => {
       <Feed />
     </Container>
   );
-};
-
-export default ProfilePage;
+}

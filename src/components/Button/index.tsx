@@ -19,9 +19,6 @@ export default styled.button<Props>`
   outline: 0;
 
   &:hover {
-    background: ${(props) =>
-      props.outlined
-        ? 'var(--twitter-dark-hover)'
-        : 'var(--twitter-hover-light)'};
+    background: var(--button-hover)
   }
 `;

@@ -98,8 +98,12 @@ export const iconCSS = css`
   fill: var(--gray);
 
   &:hover,
-  &.active {
-    fill: var(--twitter);
+  > a.active {
+    .navText,
+    svg {
+      color: var(--twitter);
+      fill: var(--twitter);
+    }
   }
 `;
 

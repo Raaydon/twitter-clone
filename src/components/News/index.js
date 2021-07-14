@@ -2,13 +2,7 @@ import React from 'react';
 
 import { Container } from './styles';
 
-interface Props {
-  header: string;
-  topic: string;
-  link?: string;
-}
-
-const News: React.FC<Props> = ({ header, topic, link }) => {
+export default function News({ header, topic, link }) {
   return (
     <Container>
       <div>
@@ -20,4 +14,3 @@ const News: React.FC<Props> = ({ header, topic, link }) => {
   );
 };
 
-export default News;

@@ -20,19 +20,7 @@ import {
   LikeIcon,
 } from './styles';
 
-interface UserType {
-  avatar: string;
-  author: string;
-  twitteruser: string;
-  posttime: string;
-  posttext: string;
-}
-
-interface PropsType {
-  data?: Array<UserType>;
-}
-
-const Tweet: React.FC<PropsType> = () => {
+export default function Tweet() {
   const [likeCounter, setLikeCounter] = useState(0);
 
   return (
@@ -93,4 +81,3 @@ const Tweet: React.FC<PropsType> = () => {
   );
 };
 
-export default Tweet;

@@ -39,5 +39,7 @@ export default createGlobalStyle`
     --twitter: #33a1f2;
     --twitter-dark-hover: rgba(255,255,255,0.05);
     --twitter-light-hover: #2c8ed6;
+    --button-hover: rgb(26,145,218);
+    --twitter-color: rgb(29, 161, 242);
   }
 `;

@@ -2,12 +2,8 @@ import React from 'react';
 
 import { Container, Item, Title } from './styles';
 
-interface Props {
-  title: string;
-  elements: React.ReactNode[];
-}
 
-const List: React.FC<Props> = ({ title, elements }) => {
+export default function List({ title, elements }) {
   return (
     <Container>
       <Item>
@@ -20,5 +16,3 @@ const List: React.FC<Props> = ({ title, elements }) => {
     </Container>
   );
 };
-
-export default List;

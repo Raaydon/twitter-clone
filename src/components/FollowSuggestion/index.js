@@ -2,12 +2,7 @@ import React from 'react';
 
 import { Container, Avatar, Info, FollowButton } from './styles';
 
-interface Props {
-  name: string;
-  nickname: string;
-}
-
-const FollowSuggestion: React.FC<Props> = ({ name, nickname }) => {
+export default function FollowSuggestion({ name, nickname }) {
   return (
     <Container>
       <div>
@@ -25,4 +20,3 @@ const FollowSuggestion: React.FC<Props> = ({ name, nickname }) => {
   );
 };
 
-export default FollowSuggestion;

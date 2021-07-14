@@ -57,12 +57,16 @@ export const MenuButton = styled.button`
   align-items: center;
   flex-shrink: 0;
 
-  > span {
+  a {
+    text-decoration: none;
+  }
+
+  .navText {
     display: none;
   }
 
   @media (min-width: 1280px) {
-    > span {
+    .navText {
       display: inline;
       margin-left: 19px;
 
@@ -86,7 +90,7 @@ export const MenuButton = styled.button`
     width: 40px;
     height: 40px;
 
-    > span {
+    span {
       display: none;
     }
 
@@ -94,7 +98,7 @@ export const MenuButton = styled.button`
       width: 100%;
       height: unset;
 
-      > span {
+      .navText {
         display: inline;
       }
     }
@@ -108,8 +112,8 @@ export const MenuButton = styled.button`
   }
 
   &:hover,
-  &.active {
-    span,
+  > a.active {
+    .navText,
     svg {
       color: var(--twitter);
       fill: var(--twitter);
@@ -205,3 +209,4 @@ export const ExitIcon = styled(KeyboardArrowDown)`
     }
   }
 `;
+

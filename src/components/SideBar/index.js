@@ -13,7 +13,7 @@ import {
   Body,
 } from './styles';
 
-const SideBar: React.FC = () => {
+export default function SideBar() {
   return (
     <Container>
       <SearchWrapper>
@@ -54,4 +54,3 @@ const SideBar: React.FC = () => {
   );
 };
 
-export default SideBar;
