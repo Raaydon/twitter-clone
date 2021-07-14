@@ -37,7 +37,7 @@ export default createGlobalStyle`
     --retweet: #00c06b;
     --like: #e8265e;
     --twitter: #33a1f2;
-    --twitter-dark-hover: #011017;
+    --twitter-dark-hover: rgba(255,255,255,0.05);
     --twitter-light-hover: #2c8ed6;
   }
 `;
